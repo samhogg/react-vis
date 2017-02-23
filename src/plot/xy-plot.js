@@ -56,7 +56,8 @@ class XYPlot extends React.Component {
       onMouseMove: React.PropTypes.func,
       onMouseEnter: React.PropTypes.func,
       animation: AnimationPropType,
-      stackBy: React.PropTypes.oneOf(ATTRIBUTES)
+      stackBy: React.PropTypes.oneOf(ATTRIBUTES),
+      clasName: React.PropTypes.string
     };
   }
 
@@ -268,12 +269,12 @@ class XYPlot extends React.Component {
   }
 
   render() {
-    const {width, height} = this.props;
+    const {width, height, className = ''} = this.props;
 
     if (this._isPlotEmpty()) {
       return (
         <div
-          className="rv-xy-plot"
+          className={`rv-xy-plot ${className}`}
           style={{
             width: `${width}px`,
             height: `${height}px`
@@ -288,7 +289,7 @@ class XYPlot extends React.Component {
           width: `${width}px`,
           height: `${height}px`
         }}
-        className="rv-xy-plot">
+        className={`rv-xy-plot ${className}`}>
         <svg
           className="rv-xy-plot__inner"
           width={width}
