@@ -28,6 +28,7 @@ import LineMarkChart from './plot/linemark-chart';
 import BarChart from './plot/bar-chart';
 import StackedVerticalBarChart from './plot/stacked-vertical-bar-chart';
 import StackedHorizontalBarChart from './plot/stacked-horizontal-bar-chart';
+import ClusteredStackedVerticalBarChart from './plot/clustered-stacked-bar-chart';
 import StackedHistogram from './plot/stacked-histogram';
 import AreaChart from './plot/area-chart';
 import AreaChartElevated from './plot/area-chart-elevated';
@@ -122,6 +123,10 @@ export const App = (
       <section>
         <h3>Stacked Vertical Bar Series</h3>
         <StackedVerticalBarChart />
+      </section>
+      <section>
+        <h3>Clustered Stacked Vertical Bar Series</h3>
+        <ClusteredStackedVerticalBarChart />
       </section>
       <section>
         <h3>Stacked Vertical Rect Series (histogram)</h3>
@@ -304,6 +309,7 @@ export const showCase = {
   BarChart,
   StackedVerticalBarChart,
   StackedHorizontalBarChart,
+  ClusteredStackedVerticalBarChart,
   StackedHistogram,
   AreaChart,
   AreaChartElevated,
