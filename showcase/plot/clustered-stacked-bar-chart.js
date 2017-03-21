@@ -26,23 +26,39 @@ import {
   YAxis,
   VerticalGridLines,
   HorizontalGridLines,
-  VerticalBarSeries
+  VerticalBarSeries,
+  DiscreteColorLegend
 } from 'index';
 
 export default class Example extends React.Component {
   render() {
     return (
       <XYPlot
+        className="clustered-stacked-bar-chart-example"
         xType="ordinal"
         stackBy="y"
         width={300}
         height={300}>
+        <DiscreteColorLegend
+          style={{position: 'absolute', left: '40px', top: '0px'}}
+          orientation="horizontal" items={[
+            {
+              title: 'Apples',
+              color: '#12939A'
+            },
+            {
+              title: 'Oranges',
+              color: '#79C7E3'
+            }
+          ]}
+        />
         <VerticalGridLines />
         <HorizontalGridLines />
         <XAxis />
         <YAxis />
         <VerticalBarSeries
           cluster="2015"
+          color="#12939A"
           data={[
             {x: 'Q1', y: 10},
             {x: 'Q2', y: 5},
@@ -51,14 +67,16 @@ export default class Example extends React.Component {
           ]}/>
         <VerticalBarSeries
           cluster="2015"
+          color="#79C7E3"
           data={[
             {x: 'Q1', y: 3},
-            {x: 'Q2', y: 5},
+            {x: 'Q2', y: 7},
             {x: 'Q3', y: 2},
             {x: 'Q4', y: 1}
           ]}/>
         <VerticalBarSeries
           cluster="2016"
+          color="#12939A"
           data={[
             {x: 'Q1', y: 3},
             {x: 'Q2', y: 8},
@@ -67,6 +85,7 @@ export default class Example extends React.Component {
           ]}/>
         <VerticalBarSeries
           cluster="2016"
+          color="#79C7E3"
           data={[
             {x: 'Q1', y: 22},
             {x: 'Q2', y: 2},
