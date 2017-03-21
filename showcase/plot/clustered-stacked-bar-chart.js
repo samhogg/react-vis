@@ -42,44 +42,36 @@ export default class Example extends React.Component {
         <XAxis />
         <YAxis />
         <VerticalBarSeries
-          cluster="alpha"
+          cluster="2015"
           data={[
-            {x: 'A', y: 10},
-            {x: 'B', y: 5},
-            {x: 'C', y: 15},
-            {x: 'D', y: 20}
+            {x: 'Q1', y: 10},
+            {x: 'Q2', y: 5},
+            {x: 'Q3', y: 15},
+            {x: 'Q4', y: 20}
           ]}/>
         <VerticalBarSeries
-          cluster="beta"
+          cluster="2015"
           data={[
-            {x: 'A', y: 3},
-            {x: 'B', y: 5},
-            {x: 'C', y: 2},
-            {x: 'D', y: 1}
+            {x: 'Q1', y: 3},
+            {x: 'Q2', y: 5},
+            {x: 'Q3', y: 2},
+            {x: 'Q4', y: 1}
           ]}/>
         <VerticalBarSeries
-          cluster="gamma"
+          cluster="2016"
           data={[
-            {x: 'A', y: 3},
-            {x: 'B', y: 8},
-            {x: 'C', y: 11},
-            {x: 'D', y: 19}
+            {x: 'Q1', y: 3},
+            {x: 'Q2', y: 8},
+            {x: 'Q3', y: 11},
+            {x: 'Q4', y: 19}
           ]}/>
         <VerticalBarSeries
-          cluster="gamma"
+          cluster="2016"
           data={[
-            {x: 'A', y: 22},
-            {x: 'B', y: 2},
-            {x: 'C', y: 22},
-            {x: 'D', y: 0}
-          ]}/>
-        <VerticalBarSeries
-          cluster="delta"
-          data={[
-            {x: 'A', y: 6},
-            {x: 'B', y: 12},
-            {x: 'C', y: 18},
-            {x: 'D', y: 6}
+            {x: 'Q1', y: 22},
+            {x: 'Q2', y: 2},
+            {x: 'Q3', y: 22},
+            {x: 'Q4', y: 18}
           ]}/>
       </XYPlot>
     );
